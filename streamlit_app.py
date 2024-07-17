@@ -19,7 +19,7 @@ def format_model_name(model_key):
 
     # Custom formatting for specific models
     if "Meta-Llama-3-8B-Instruct" in model_key:
-        return "Llama 3 8B-Instruct"
+        return "gpt-3.5-turbo"
     else:
         # General formatting for other models
         formatted_name = ' '.join(name_parts[:-2]).title()  # Join them into a single string with title case
