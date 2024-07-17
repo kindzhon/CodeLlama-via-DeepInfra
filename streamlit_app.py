@@ -52,7 +52,7 @@ st.sidebar.markdown('---')
 
 API_KEY = st.secrets["api_key"]
 
-openai.api_base = "https://api.deepinfra.com/v1/openai"
+openai.api_base = "https://api.chatanywhere.com.cn"
 MODEL_CODELLAMA = selected_model
 
 def get_response(api_key, model, user_input, max_tokens, top_p):
@@ -61,7 +61,7 @@ def get_response(api_key, model, user_input, max_tokens, top_p):
         if "meta-llama/Meta-Llama-3-8B-Instruct" in model:
             # Assume different API setup for Meta-Llama
             chat_completion = requests.post(
-                "https://api.deepinfra.com/v1/openai/chat/completions",
+                "https://api.chatanywhere.com.cn/v1/openai/chat/completions",
                 headers={"Authorization": f"Bearer {api_key}"},
                 json={
                     "model": model,
